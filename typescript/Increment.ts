@@ -1,4 +1,4 @@
-
+import Animation from "./base/Animation.js";
 
 export default class Increment extends Animation{
 constructor(aniData,argsForAlgo={}){
