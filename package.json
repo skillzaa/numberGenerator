@@ -1,0 +1,28 @@
+{
+  "name": "animation",
+  "version": "1.0.0",
+  "description": "The main animation object and its subclasses",
+  "main": "dist/aminations.js",
+  "scripts": {
+    "test": "jest",
+    "dist": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skillzaa/Animation.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Bilal Tariq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skillzaa/Animation/issues"
+  },
+  "homepage": "https://github.com/skillzaa/Animation#readme",
+  "devDependencies": {
+    "rollup": "^2.45.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.2.4"
+  }
+}
