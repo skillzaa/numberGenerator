@@ -1,4 +1,4 @@
-const Linear = require("../dist/Linear");
+const Linear = require("../testSrc/Linear");
 const log = console.log;
 const linear = new Linear(
   {attributeToAnimateName:"x",fromSecond:5,toSecond:10,readOnlyElementAttrNames:[]},
@@ -20,7 +20,7 @@ test('cur time = max = 10000 so x=to=300 also > 0 ', () => {
 
 //===================================================
 let x = 0; //from  
-const deltaPerMilli = linear.deltaPerMili();
+const deltaPerMilli = linear.deltaPerMilli();
 
 for (let currentTime = 5000; currentTime <= 10000; currentTime++) {
   let newX =  linear.animate(x,currentTime,{});

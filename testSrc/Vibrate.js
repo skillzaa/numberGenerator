@@ -1,25 +1,6 @@
-'use strict';
 
-class Animation {
-    constructor(aniData, argsForAlgo = {}) {
-        //this.aniData = aniData;
-        this.attributeToAnimateName = aniData.attributeToAnimateName; //must 
-        this.fromSecond = aniData.fromSecond; //must for every animation
-        this.toSecond = aniData.toSecond; //must for every animation
-        this.readOnlyElementAttrNames = aniData.readOnlyElementAttrNames;
-        //--------------------------------------------------------------------
-        this.argsForAlgo = argsForAlgo;
-        //--------------------------------------------------------------------
-        this.fps = 60; // this has to be settled
-        this.state = {}; ///every new data goes here
-    }
-    animate(attributeToAnimateData, currentSecondMilli, readOnlyElementData = {}) {
-        return true;
-    }
-}
-//module.exports = Animation;
-
-class Vibrate extends Animation {
+const Animation = require("./base/Animation.js")
+module.exports =  class Vibrate extends Animation {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);
         this.state.previous = 0;
@@ -31,8 +12,8 @@ class Vibrate extends Animation {
         if (this.state.previous == 0) {
             this.state.previous = Date.now();
         }
-        this.argsForAlgo.timeGap;
-        this.argsForAlgo.deviation;
+        const timeGap = this.argsForAlgo.timeGap;
+        const deviation = this.argsForAlgo.deviation;
         // if(this.isWaitOver() == true){
         //     this.state.previous = Date.now();
         return this.manipulate(attributeToAnimateData);
@@ -57,8 +38,6 @@ class Vibrate extends Animation {
     manipulate(incomming) {
         const min = incomming - this.argsForAlgo.deviation;
         const max = incomming + this.argsForAlgo.deviation;
-        return Math.abs(Math.random() * (max - min) + min);
+        return Math.abs(Math.random() * (max - min + 1) + min);
     }
 }
-
-module.exports = Vibrate;
