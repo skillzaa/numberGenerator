@@ -2,6 +2,7 @@ import IAnimation from "./IAnimation.js";
 import IaniData from "./IaniData.js";
 
 export default abstract class Animation implements IAnimation{
+//abstract class Animation implements IAnimation{
     
     attributeToAnimateName:string;
     fromSecond:number;   
@@ -25,9 +26,10 @@ constructor(aniData:IaniData,argsForAlgo:object={}){
 }
 
 public animate(attributeToAnimateData:string|number|boolean,
-    currentSecond:number,
+    currentSecondMilli:number,
     readOnlyElementData:{}={}):string|number|boolean{    
 return true;
 }
 //===============================================  
 }
+//module.exports = Animation;

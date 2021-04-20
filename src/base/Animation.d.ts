@@ -9,5 +9,5 @@ export default abstract class Animation implements IAnimation {
     state: {};
     fps: number;
     constructor(aniData: IaniData, argsForAlgo?: object);
-    animate(attributeToAnimateData: string | number | boolean, currentSecond: number, readOnlyElementData?: {}): string | number | boolean;
+    animate(attributeToAnimateData: string | number | boolean, currentSecondMilli: number, readOnlyElementData?: {}): string | number | boolean;
 }

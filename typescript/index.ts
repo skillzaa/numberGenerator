@@ -1,16 +1,12 @@
-import Animation from "../dist/base/Animation.v.1.0.0.js";
+import Vibrate from "../src/Vibrate.js";
 
-
-class A2 extends Animation{
-    constructor(aniData,argsForAlgo){
-        super(aniData,argsForAlgo);
-    }
-
-}
-let a = new A2({},{});
-let log = console.log;
-log(a);
-// export default class AnimtionIndex {
-// 
-
-// }
+const log = console.log;
+const vibrate = new Vibrate(
+  {attributeToAnimateName:"x",fromSecond:1,toSecond:10,readOnlyElementAttrNames:[]},
+  {timeGap:0,deviation:5}
+);
+log(vibrate);
+log("First",vibrate.animate(15,1,[]));
+log("2",vibrate.animate(15,1,[]));
+log("3",vibrate.animate(15,1,[]));
+log("4",vibrate.animate(15,1,[]));

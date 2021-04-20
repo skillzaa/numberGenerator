@@ -1,6 +1,26 @@
-import Animation from "./base/Animation.js";
+'use strict';
 
-export default class Linear extends Animation {
+class Animation {
+    constructor(aniData, argsForAlgo = {}) {
+        //this.aniData = aniData;
+        this.attributeToAnimateName = aniData.attributeToAnimateName; //must 
+        this.fromSecond = aniData.fromSecond; //must for every animation
+        this.toSecond = aniData.toSecond; //must for every animation
+        this.readOnlyElementAttrNames = aniData.readOnlyElementAttrNames;
+        //--------------------------------------------------------------------
+        this.argsForAlgo = argsForAlgo;
+        //--------------------------------------------------------------------
+        this.fps = 60; // this has to be settled
+        this.state = {}; ///every new data goes here
+    }
+    animate(attributeToAnimateData, currentSecondMilli, readOnlyElementData = {}) {
+        return true;
+    }
+}
+//module.exports = Animation;
+
+//const Animation = require("./base/Animation");
+module.exports = class Linear extends Animation {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);
     }
@@ -11,21 +31,24 @@ export default class Linear extends Animation {
         if (currentSecond < this.fromSecond || currentSecond > this.toSecond) {
             return attributeToAnimateData;
         }
-        const deltaPerMilli = this.deltaPerMilli();
+        const deltaPerMilli = this.deltaPerMili();
         const currentTimeDifferenceInMilli = this.currentTimeDifferenceInMilli(currentSecondMilli);
         const attributeToAnimateDataUpdated = (deltaPerMilli * currentTimeDifferenceInMilli) + this.argsForAlgo.from; // no need for decimal since they r pixels
         return (Number(attributeToAnimateDataUpdated));
         //--------------------------------
     }
-    deltaPerMilli() {
+    deltaPerMili() {
         const timeDiff = (this.toSecond - this.fromSecond);
         const timeDiffMilli = timeDiff * 1000; //convert sec into milli sec
         const totalValueDiff = (this.argsForAlgo.to - this.argsForAlgo.from);
-        return totalValueDiff / timeDiffMilli;
+        const deltaPerMili = totalValueDiff / timeDiffMilli;
+        return deltaPerMili;
     }
     currentTimeDifferenceInMilli(currentSecondMilli) {
         const fromSecondMilli = this.fromSecond * 1000;
         return Math.abs(Number(currentSecondMilli - fromSecondMilli));
     }
 }
+//module.exports = Linear;
+
 //module.exports = Linear;

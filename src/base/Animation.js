@@ -11,7 +11,8 @@ export default class Animation {
         this.fps = 60; // this has to be settled
         this.state = {}; ///every new data goes here
     }
-    animate(attributeToAnimateData, currentSecond, readOnlyElementData = {}) {
+    animate(attributeToAnimateData, currentSecondMilli, readOnlyElementData = {}) {
         return true;
     }
 }
+//module.exports = Animation;

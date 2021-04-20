@@ -1,6 +1,7 @@
-import Animation from "./base/Animation.js";
 
-export default class Linear extends Animation {
+const Animation = require("./base/Animation.js")
+
+module.exports =  class Linear extends Animation {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);
     }

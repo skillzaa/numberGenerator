@@ -1,10 +1,10 @@
-import { terser } from "rollup-plugin-terser";
+//import { terser } from "rollup-plugin-terser";
 //import uglifyjs from 'uglifyjs';
 export default {
-	input: 'src/Animation.js',
-	plugins: [terser()],
+	input: 'src/Vibrate.js',
+//	plugins: [terser()],
 	output: {
-	  file: 'dist/base/Animation.js',
-	  format: 'es',
+	  file: 'dist/Vibrate.js',
+	  format: 'cjs',
 	}
   };
