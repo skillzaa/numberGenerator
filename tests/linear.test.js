@@ -1,5 +1,6 @@
-const Animations = require("../dist/AnimationsCJS");
+const Animations  = require("../dist/Animations.1.0.1.CJS");
 const animations = new Animations();
+
 const log = console.log;
 
 const linear = animations.addLinear("x",5,10,0,300);

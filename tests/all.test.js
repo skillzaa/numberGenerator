@@ -1,7 +1,6 @@
-const Animations  =require("../dist/AnimationsCJS");
+const Animations  = require("../dist/Animations.1.0.1.CJS");
 const log = console.log;
 const animations = new Animations();
-
 
 test('expect(typeof l).toBe(object)', () => {
     const l = animations.addLinear("x",1,100,0,1000);
