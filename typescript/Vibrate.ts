@@ -19,13 +19,13 @@ if (this.state.previous == 0){
 const timeGap = this.argsForAlgo.timeGap; 
 const deviation = this.argsForAlgo.deviation; 
 
-// if(this.isWaitOver() == true){
-//     this.state.previous = Date.now();
+ if(this.isWaitOver() == true){
+    this.state.previous = Date.now();
 return this.manipulate(attributeToAnimateData);
-// }
-// else{
-//     return attributeToAnimateData;
-// }
+}
+else{
+    return attributeToAnimateData;
+ }
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 }

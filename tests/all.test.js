@@ -1,4 +1,4 @@
-const Animations  =require("../testSrc/Animations");
+const Animations  =require("../dist/AnimationsCJS");
 const log = console.log;
 const animations = new Animations();
 
