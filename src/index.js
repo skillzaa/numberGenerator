@@ -1,6 +1,5 @@
-import Animations from "../dist/Animations.1.0.0.js";
+import Animations from "./Animations.js";
 const log = console.log;
-log("new");
 const animations = new Animations();
 log(animations);
 const l = animations.addLinear("x", 1, 100, 0, 1000);

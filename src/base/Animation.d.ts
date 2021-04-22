@@ -6,7 +6,7 @@ export default abstract class Animation implements IAnimation {
     toSecond: number;
     readOnlyElementAttrNames: string[] | [];
     argsForAlgo: {};
-    state: {};
+    private state;
     fps: number;
     constructor(aniData: IaniData, argsForAlgo?: object);
     animate(attributeToAnimateData: string | number | boolean, currentSecondMilli: number, readOnlyElementData?: {}): string | number | boolean;
