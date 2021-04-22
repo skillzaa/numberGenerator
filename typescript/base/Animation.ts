@@ -9,7 +9,7 @@ export default abstract class Animation implements IAnimation{
     toSecond:number;
     readOnlyElementAttrNames:string[]|[];
     argsForAlgo : {};
-    state:{};
+private    state:{};
     fps:number;
 
 constructor(aniData:IaniData,argsForAlgo:object={}){

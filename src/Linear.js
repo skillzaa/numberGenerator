@@ -1,5 +1,5 @@
 import Animation from "./base/Animation.js";
-
+//const Animation = require("./base/Animation");
 export default class Linear extends Animation {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);

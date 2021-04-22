@@ -1,8 +1,11 @@
-import Vibrate from "../src/Vibrate.js";
+import Animations from "../dist/Animations.1.0.0.js";
 const log = console.log;
-const vibrate = new Vibrate({ attributeToAnimateName: "x", fromSecond: 1, toSecond: 10, readOnlyElementAttrNames: [] }, { timeGap: 0, deviation: 5 });
-log(vibrate);
-log("First", vibrate.animate(15, 1, []));
-log("2", vibrate.animate(15, 1, []));
-log("3", vibrate.animate(15, 1, []));
-log("4", vibrate.animate(15, 1, []));
+log("new");
+const animations = new Animations();
+log(animations);
+const l = animations.addLinear("x", 1, 100, 0, 1000);
+const v = animations.addVibrate("x", 1, 100, 100, 10);
+const r = animations.addRandomColors("x", 1, 100);
+log(l);
+log(v);
+log(r);

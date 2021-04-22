@@ -1,6 +1,6 @@
 
-const Animation = require("./base/Animation.js")
-
+const Animation = require("./base/Animation.js");
+//const Animation = require("./base/Animation");
 module.exports =  class Linear extends Animation {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);

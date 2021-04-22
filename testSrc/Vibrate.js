@@ -1,5 +1,5 @@
 
-const Animation = require("./base/Animation.js")
+const Animation = require("./base/Animation.js");
 module.exports =  class Vibrate extends Animation {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);

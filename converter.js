@@ -5,8 +5,8 @@ const log = console.log;
 const  EXTENSION = '.js';
 
 /////////////////////setup/////////////////////////////////////
-const homeDir = "./src/base";
-const targetDir = "./testSrc/base";
+const homeDir = "./src";
+const targetDir = "./testSrc";
 /////////////////////setup/////////////////////////////////////
 const dir = __dirname + targetDir.substring(1);
 if (!fs.existsSync(dir)) {
