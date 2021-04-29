@@ -1,19 +1,19 @@
-const Animations  = require("../dist/Animations.1.0.1.CJS");
+const Generators  = require("../src/Generators");
 const log = console.log;
-const animations = new Animations();
+const generators = new Generators();
 
 test('expect(typeof l).toBe(object)', () => {
-    const l = animations.addLinear("x",1,100,0,1000);
+    const l = generators.addCounter("x",1,100,0,1000);
     expect(typeof l).toBe('object');
   });
 
 test('expect(typeof l).toBe(object)', () => {
-    const v = animations.addVibrate("x",1,100,100,10);
+    const v = generators.addVibrate("x",1,100,100,10);
     expect(typeof v).toBe('object');
   });
 
 test('expect(typeof l).toBe(object)', () => {
-    const r = animations.addRandomColors("x",1,100);
+    const r = generators.addRandomColors("x",1,100);
     expect(typeof r).toBe('object');
   });
 

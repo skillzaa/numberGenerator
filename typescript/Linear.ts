@@ -1,4 +1,4 @@
- import Animation from "./base/Animation.js";
+ import Animation from "./base/BaseGenerator.js";
 //const Animation = require("./base/Animation");
 
 export default class Linear extends Animation{

@@ -1,16 +1,12 @@
-import IAnimation from "./IAnimation.js";
-import IaniData from "./IaniData.js";
 
-export default abstract class Animation implements IAnimation{
-//abstract class Animation implements IAnimation{
-    
-    attributeToAnimateName:string;
-    fromSecond:number;   
-    toSecond:number;
-    readOnlyElementAttrNames:string[]|[];
-    argsForAlgo : {};
-private    state:{};
-    fps:number;
+class BaseGenerator{  
+            attributeToAnimateName:string;
+            fromSecond:number;   
+            toSecond:number;
+            readOnlyElementAttrNames:string[]|[];
+            argsForAlgo : {};
+private     state:{};
+            fps:number;
 
 constructor(aniData:IaniData,argsForAlgo:object={}){
  //this.aniData = aniData;
@@ -32,4 +28,4 @@ return true;
 }
 //===============================================  
 }
-//module.exports = Animation;
+module.exports = BaseGenerator;

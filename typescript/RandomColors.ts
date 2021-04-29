@@ -1,6 +1,7 @@
-import Animation from "./base/Animation.js";
+export {};
+const BaseGenerator = require('./base/BaseGenerator');
 
-export default class RandomColors extends Animation{
+module.exports = class RandomColors extends BaseGenerator{
 constructor(aniData,argsForAlgo={}){
     super(aniData,argsForAlgo);
     this.state.previous = 0;

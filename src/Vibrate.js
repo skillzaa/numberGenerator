@@ -1,5 +1,7 @@
-import Animation from "./base/Animation.js";
-export default class Vibrate extends Animation {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const BaseGenerator = require('./base/BaseGenerator');
+module.exports = class Vibrate extends BaseGenerator {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);
         this.state.previous = 0;
@@ -39,4 +41,4 @@ export default class Vibrate extends Animation {
         const max = incomming + this.argsForAlgo.deviation;
         return Math.abs(Math.random() * (max - min + 1) + min);
     }
-}
+};

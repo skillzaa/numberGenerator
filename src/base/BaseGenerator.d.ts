@@ -1,6 +1,4 @@
-import IAnimation from "./IAnimation.js";
-import IaniData from "./IaniData.js";
-export default abstract class Animation implements IAnimation {
+declare class BaseGenerator {
     attributeToAnimateName: string;
     fromSecond: number;
     toSecond: number;

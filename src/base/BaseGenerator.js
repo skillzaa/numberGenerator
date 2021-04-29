@@ -1,4 +1,5 @@
-export default class Animation {
+"use strict";
+class BaseGenerator {
     constructor(aniData, argsForAlgo = {}) {
         //this.aniData = aniData;
         this.attributeToAnimateName = aniData.attributeToAnimateName; //must 
@@ -15,4 +16,4 @@ export default class Animation {
         return true;
     }
 }
-//module.exports = Animation;
+module.exports = BaseGenerator;

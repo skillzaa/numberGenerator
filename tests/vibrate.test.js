@@ -1,8 +1,7 @@
-const Animations  = require("../dist/Animations.1.0.1.CJS");
-const animations = new Animations();
+const Generators = require('../src/Generators');
+const generators = new Generators();
 //const log = console.log;
-
-const vib = animations.addVibrate("x",1,10,6000,300,[]);
+const vib = generators.addVibrate("x",1,10,6000,300,[]);
 
 
 test('first time it will NOT change', () => {

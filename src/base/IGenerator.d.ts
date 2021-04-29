@@ -1,4 +1,4 @@
-export default interface IAnimation {
+interface IGenerator {
     attributeToAnimateName: string;
     fromSecond: number;
     toSecond: number;
@@ -7,4 +7,3 @@ export default interface IAnimation {
     fps: number;
     animate(attributeToAnimateData: string | number | boolean, currentSecondMilli: number, readOnlyElementAttr: {}): string | number | boolean;
 }
-/**THE FROM, and To are avaiable through out the class from argsForAlgo and the fromSEcond and toSeconds avaiable in class  */ 

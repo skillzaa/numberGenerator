@@ -1,4 +1,4 @@
-export default interface IaniData {
+interface IaniData {
     attributeToAnimateName: string;
     fromSecond: number;
     toSecond: number;

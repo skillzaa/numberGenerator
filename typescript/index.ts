@@ -1,13 +1,13 @@
-import Animations from "./Animations.js";
-
+const Generators = require('./Generators');
 const log = console.log;
-const animations = new Animations();
 
-log(animations);
+const generators = new Generators();
 
-const l = animations.addLinear("x",1,100,0,1000);
-const v = animations.addVibrate("x",1,100,100,10);
-const r = animations.addRandomColors("x",1,100);
+log(generators);
+
+const l = generators.addCounter("x",1,100,0,1000);
+const v = generators.addVibrate("x",1,100,100,10);
+const r = generators.addRandomColors("x",1,100);
 
 log(l);
 log(v);

@@ -1,6 +1,7 @@
-import IbasicAnimationData from "./IaniData.js";
+// import IbasicAnimationData from "./IaniData.js";
+// const IbasicAnimationData = require('./IaniData');
 
-export default interface IAnimation {
+ interface IGenerator {
 
     attributeToAnimateName:string;
     fromSecond:number;
@@ -15,3 +16,6 @@ export default interface IAnimation {
         readOnlyElementAttr:{}):string|number|boolean; 
 }
 /**THE FROM, and To are avaiable through out the class from argsForAlgo and the fromSEcond and toSeconds avaiable in class  */
+
+module.exports = IGenerator;
+

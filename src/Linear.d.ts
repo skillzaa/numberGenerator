@@ -1,4 +1,4 @@
-import Animation from "./base/Animation.js";
+import Animation from "./base/BaseGenerator.js";
 export default class Linear extends Animation {
     constructor(aniData: any, argsForAlgo?: {});
     animate(attributeToAnimateData: string | number | boolean, currentSecondMilli: number, readOnlyElementData?: {}): string | number | boolean;
