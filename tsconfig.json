@@ -2,7 +2,7 @@
   "compilerOptions": {
     
     "target": "ES2016",   
-    "module": "commonjs",            
+    "module": "ES6",            
              
      "declaration": true,                   
     
@@ -12,6 +12,6 @@
     "noImplicitAny": false,
     "esModuleInterop": true,                 
     "skipLibCheck": true,                    
-  
-  }
+  },
+  "exclude": ["./testSrc"]
 }

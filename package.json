@@ -1,12 +1,13 @@
 {
   "name": "aninumber",
-  "version": "1.0.0",
-  "description": "Generate numbers with in a range based upon",
-  "main": "./src/Generators.js",
-  "types": "./index.d.ts",
+  "version": "1.1.2",
+  "description": "Animation Generator Module",
+  "main": "./dist/Generators.js",
+  "types": "./dist/Generators.d.ts",
   "scripts": {
     "test": "jest",
-    "dist": "rollup -c rollup.config.js"
+    "dist": "rollup -c rollup.config.js",
+    "predist": "rollup -c rollup.cjs.js"
   },
   "repository": {
     "type": "git",

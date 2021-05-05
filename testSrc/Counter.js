@@ -1,5 +1,6 @@
-import BaseGenerator from "./BaseGenerator.js";
-export default class Counter extends BaseGenerator {
+
+const BaseGenerator = require("./BaseGenerator.js");
+module.exports =  class Counter extends BaseGenerator {
     constructor(aniData, argsForAlgo = {}) {
         super(aniData, argsForAlgo);
         // this.    

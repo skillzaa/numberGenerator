@@ -1,4 +1,4 @@
-const Generators = require('../src/Generators');
+const Generators = require('../testSrc/Generators');
 const generators = new Generators();
 //const log = console.log;
 const vib = generators.addVibrate("x",1,10,6000,300,[]);

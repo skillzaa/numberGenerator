@@ -1,5 +1,7 @@
+import IaniData from "./interfaces/IaniData";
+import IBaseGenerator from "./interfaces/IBaseGenerator";
 
-class BaseGenerator{  
+export default class BaseGenerator implements IBaseGenerator{  
             attributeToAnimateName:string;
             fromSecond:number;   
             toSecond:number;
@@ -8,11 +10,11 @@ class BaseGenerator{
 private     state:{};
             fps:number;
 
-constructor(aniData:IaniData,argsForAlgo:object={}){
+constructor(aniData:IaniData,argsForAlgo={}){
  //this.aniData = aniData;
  this.attributeToAnimateName = aniData.attributeToAnimateName ;//must 
- this.fromSecond = aniData.fromSecond  ; //must for every animation
- this.toSecond = aniData.toSecond ;//must for every animation
+ this.fromSecond = aniData.fromSecond *1000  ; //must for every animation
+ this.toSecond = aniData.toSecond *1000;//must for every animation
  this.readOnlyElementAttrNames = aniData.readOnlyElementAttrNames;   
 //--------------------------------------------------------------------
  this.argsForAlgo = argsForAlgo;
@@ -28,4 +30,3 @@ return true;
 }
 //===============================================  
 }
-module.exports = BaseGenerator;

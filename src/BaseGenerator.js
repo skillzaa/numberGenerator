@@ -1,10 +1,9 @@
-"use strict";
-class BaseGenerator {
+export default class BaseGenerator {
     constructor(aniData, argsForAlgo = {}) {
         //this.aniData = aniData;
         this.attributeToAnimateName = aniData.attributeToAnimateName; //must 
-        this.fromSecond = aniData.fromSecond; //must for every animation
-        this.toSecond = aniData.toSecond; //must for every animation
+        this.fromSecond = aniData.fromSecond * 1000; //must for every animation
+        this.toSecond = aniData.toSecond * 1000; //must for every animation
         this.readOnlyElementAttrNames = aniData.readOnlyElementAttrNames;
         //--------------------------------------------------------------------
         this.argsForAlgo = argsForAlgo;
@@ -16,4 +15,3 @@ class BaseGenerator {
         return true;
     }
 }
-module.exports = BaseGenerator;

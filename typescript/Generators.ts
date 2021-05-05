@@ -1,32 +1,34 @@
-const ArrayOfObjects = require('@bilzaa.com/arrayofobjects');
-const Vibrate = require('./Vibrate');
-const RandomColors = require('./RandomColors');
-const Counter = require('./Counter');
+import Counter from "./Counter.js";
+import RandomColors from "./RandomColors.js";
+import Vibrate from "./Vibrate.js";
 
-module.exports =  class Generators {
-data:InstanceType<typeof ArrayOfObjects>;
+export default  class Generators {
+data:object[];
 
 constructor(){
-this.data = new ArrayOfObjects();    
+this.data = [];    
 }
 
 addCounter(
     attributeToAnimateName:string,
     fromSecond:number,
     toSecond:number,
-    timeGap:number,
-    deviation:number,
+    from:number,
+    to:number,
     readOnlyElementAttrNames=[]
-    ){
+    ):Counter
+{
+if(fromSecond > toSecond){throw new Error("From second can not be bigger than to second.");
+}        
     const aniData = {
         attributeToAnimateName:attributeToAnimateName,
         fromSecond:fromSecond,
         toSecond:toSecond,
         readOnlyElementAttrNames:readOnlyElementAttrNames
     };
-    const argsForAlgo = { timeGap: timeGap, deviation:deviation};
+    const argsForAlgo = { from: from, to:to};
 const a = new Counter(aniData,argsForAlgo);        
-this.data.add(a);
+this.data.push(a);
 return a;
 }
 addVibrate(
@@ -36,7 +38,7 @@ addVibrate(
     timeGap:number,
     deviation:number,
     readOnlyElementAttrNames=[]
-    ){
+    ):Vibrate{
     const aniData = {
         attributeToAnimateName:attributeToAnimateName,
         fromSecond:fromSecond,
@@ -45,7 +47,7 @@ addVibrate(
     };
     const argsForAlgo = { timeGap: timeGap, deviation:deviation};
 const a = new Vibrate(aniData,argsForAlgo);        
-this.data.add(a);
+this.data.push(a);
 return a;
 }
 addRandomColors(
@@ -53,7 +55,7 @@ addRandomColors(
     fromSecond:number,
     toSecond:number,
     readOnlyElementAttrNames=[]
-    ){
+    ):RandomColors{
         const aniData = {
         attributeToAnimateName:attributeToAnimateName,
         fromSecond:fromSecond,
@@ -61,7 +63,7 @@ addRandomColors(
         readOnlyElementAttrNames:readOnlyElementAttrNames
     };
 const a = new RandomColors(aniData,{});
-this.data.add(a);
+this.data.push(a);
 return a;
 }
 //////////////////////////////////////////////////

@@ -1,5 +1,5 @@
-const Generators  = require("../src/Generators");
-const log = console.log;
+const Generators  = require("../testSrc/Generators");
+//const log = console.log;
 const generators = new Generators();
 
 test('expect(typeof l).toBe(object)', () => {

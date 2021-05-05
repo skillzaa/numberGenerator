@@ -4,7 +4,7 @@ export default {
 	input: 'src/Generators.js',
 //	plugins: [terser()],
 	output: {
-	  file: 'dist/Generators.js',
-	  format: 'es',
+	  file: 'dist/GeneratorsCjs.js',
+	  format: 'cjs',
 	}
   };

@@ -1,7 +1,8 @@
-import Counter from "./Counter.js";
-import RandomColors from "./RandomColors.js";
-import Vibrate from "./Vibrate.js";
-export default class Generators {
+
+const Counter = require("./Counter.js");
+const RandomColors = require("./RandomColors.js");
+const Vibrate = require("./Vibrate.js");
+module.exports =  class Generators {
     constructor() {
         this.data = [];
     }

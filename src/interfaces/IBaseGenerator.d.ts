@@ -1,11 +1,11 @@
-declare class BaseGenerator {
+import IaniData from "./IaniData";
+export default interface IBaseGenerator {
     attributeToAnimateName: string;
     fromSecond: number;
     toSecond: number;
     readOnlyElementAttrNames: string[] | [];
     argsForAlgo: {};
-    private state;
     fps: number;
-    constructor(aniData: IaniData, argsForAlgo?: object);
+    constructor(aniData: IaniData, argsForAlgo?: object): any;
     animate(attributeToAnimateData: string | number | boolean, currentSecondMilli: number, readOnlyElementData?: {}): string | number | boolean;
 }
